@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: white;
+  height: 100vh;
+}
+
+:root {
+  --column-no: 5;
+}
+
+.grid-container {
+  max-width: 80%;
+  outline: 2px solid darkblue;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(var(--column-no), 1fr);
+  grid-gap: 1rem;
+}
+
+.card {
+  aspect-ratio: 3/4;
+  border: 1px solid gray;
+  background-color: cyan;
+}
+
+.empty-grid {
+  display: grid;
+}
+.item-a {
+  background-color: darkcyan;
+  grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+}
