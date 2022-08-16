@@ -10,20 +10,22 @@ body {
 }
 
 :root {
-  --column-no: 5;
+  --column-no: 4;
 }
 
 .grid-container {
-  max-width: 80%;
+  width: 400px;
   outline: 2px solid darkblue;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(var(--column-no), 1fr);
   grid-gap: 1rem;
+  transition: transform 2s;
 }
 
 .card {
-  aspect-ratio: 3/4;
+  transition: transform 2s;
+  aspect-ratio: 1;
   border: 1px solid gray;
   background-color: cyan;
 }
@@ -37,4 +39,11 @@ body {
   grid-column-end: five;
   grid-row-start: row1-start;
   grid-row-end: 3;
+}
+
+.flipped .grid-container {
+  transform: rotate(90deg);
+}
+.flipped .card {
+  transform: rotate(-90deg);
 }
